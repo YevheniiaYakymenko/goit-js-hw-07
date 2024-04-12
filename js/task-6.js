@@ -11,15 +11,17 @@ const boxDiv = document.querySelector("#boxes");
 
 function onCreateBoxes(amount) {
   boxDiv.innerHTML = "";
+  const arrayDiv = [];
   let size = 30;
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
     div.style.backgroundColor = getRandomHexColor();
-    boxDiv.append(div);
+    arrayDiv.push(div);
     size += 10;
   }
+  boxDiv.append(...arrayDiv);
 }
 
 function onDestroyBoxes() {
