@@ -65,11 +65,20 @@ body {
 }
 
 .gallery {
-  width: 1128px;
-  height: 300px;
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery li {
+  width: calc((100% - 24px * 2) / 3);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
 }
 
 .custom-body {
@@ -186,4 +195,68 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.controls {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 104px;
+  background-color: #f6f6fe;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.controls-input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 72px;
+  width: 150px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.controls-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+}
+
+.controls-btn-destroy {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background-color: #ff4e4e;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.controls-btn-destroy:hover {
+  background-color: #ff7070;
+}
+
+.boxes {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 134px;
+  background-color: #f6f6fe;
+  display: flex;
+  gap: 44px;
 }
